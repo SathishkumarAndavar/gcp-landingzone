@@ -1,0 +1,21 @@
+# Study Checklist — GCP Landing Zone
+
+- [ ] Consolidated Best Practices Review
+- [ ] Cloud Adoption Framework & strategy
+- [ ] Organization & folder design
+- [ ] Project patterns & Project Factory automation
+- [ ] IAM: Groups, Roles (Primitive, Predefined, Custom), Service Accounts
+- [ ] Access: Workload Identity Federation (WIF), IAP
+- [ ] Organization Policies (constraints)
+- [ ] Networking: VPC design, Shared VPC, Subnets
+- [ ] Networking: DNS, Cloud NAT, Peering, Interconnect/VPN, Private Service Connect
+- [ ] Networking: Comparing Shared VPC vs. Peering vs. PSC
+- [ ] Billing and resource hierarchy
+- [ ] Hybrid Connectivity (VPN/Interconnect)
+- [ ] Cost Management & Optimization
+- [ ] Terraform patterns (modules, remote state)
+- [ ] Security tools: SCC, Cloud Armor, Apigee, Firewall rules, VPC Service Controls (VPC-SC), Secret Manager
+- [ ] Logging, Monitoring & Alerting (Audit logs, Cloud Monitoring, Log Sinks)
+- [ ] CI/CD for infra (Cloud Build / GitHub Actions)
+- [ ] Disaster Recovery (DR) & Business Continuity Planning (BCP)
+- [ ] Incident response and runbooks
