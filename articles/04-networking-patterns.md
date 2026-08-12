@@ -30,8 +30,11 @@ In a landing zone, you need to connect various projects and services securely an
 - **Use Case**: Connecting a workload VPC to a partner's VPC, or linking two distinct environments that should not be part of the same Shared VPC.
 
 ### 3. Private Service Connect (PSC)
-- **What it is**: Allows a service consumer to privately access a managed service in another VPC network through a forwarding rule that acts as a service endpoint.
-- **Pros**: Decouples the service provider and consumer networks completely. The consumer doesn't see the provider's network, and the provider doesn't see the consumer's. Avoids IP overlap issues.
+- **What it is**: A mechanism that allows a service *consumer* to privately access a managed service in a service *provider's* VPC. The consumer creates a local endpoint (a forwarding rule) in their own VPC that routes traffic to the service.
+- **Pros**:
+  - **Complete Decoupling**: The consumer and provider VPCs are completely isolated. They do not exchange routes, and their IP address spaces can overlap without issue. This is a major advantage over VPC Peering.
+  - **One-Way Access**: It provides a secure, one-way "service injection" model. The consumer can access the service, but the service provider cannot initiate connections back into the consumer's network.
+  - **Simplified Management**: The service provider exposes a single "Service Attachment," and any number of consumers can connect to it without complex network configurations on the provider's side.
 - **Cons**: More complex to set up than peering for simple use cases. Primarily for a one-way service exposure model.
 - **Use Case**: Securely exposing a managed service (like a database or an internal API) from a central services project to multiple consumer projects without using peering or external IPs.
 

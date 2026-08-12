@@ -18,5 +18,6 @@
 - [ ] Security tools: SCC, Cloud Armor, Apigee, Firewall rules, VPC Service Controls (VPC-SC), Secret Manager
 - [ ] Logging, Monitoring & Alerting (Audit logs, Cloud Monitoring, Log Sinks)
 - [ ] CI/CD for infra (Cloud Build / GitHub Actions)
+- [ ] WIF in Practice (End-to-End Workflow)
 - [ ] Disaster Recovery (DR) & Business Continuity Planning (BCP)
 - [ ] Incident response and runbooks

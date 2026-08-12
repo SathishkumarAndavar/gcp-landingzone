@@ -72,4 +72,26 @@ resource "google_organization_policy" "allowed_domains_policy" {
     }
   }
 }
+
+## 3. Organization Policy Example (Restricting a Service)
+
+**Scenario**: You want to prevent any VM in the `prod-environment` folder from being created with a public IP address to enhance security.
+
+**Best Practice**: Apply this boolean constraint at the **Folder Level**. This allows non-prod environments to have different rules if needed.
+
+```terraform
+variable "prod_folder_id" {
+  description = "The ID of the production environment folder (e.g., folders/12345)."
+  type        = string
+}
+
+resource "google_folder_organization_policy" "no_public_ips" {
+  folder     = var.prod_folder_id
+  constraint = "compute.vmExternalIpAccess"
+
+  boolean_policy {
+    enforced = true
+  }
+}
+```
 ```
