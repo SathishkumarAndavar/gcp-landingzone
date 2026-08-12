@@ -14,6 +14,7 @@
 - [ ] Hybrid Connectivity (VPN/Interconnect)
 - [ ] Cost Management & Optimization
 - [ ] Terraform patterns (modules, remote state)
+- [ ] gcloud CLI common commands
 - [ ] Security tools: SCC, Cloud Armor, Apigee, Firewall rules, VPC Service Controls (VPC-SC), Secret Manager
 - [ ] Logging, Monitoring & Alerting (Audit logs, Cloud Monitoring, Log Sinks)
 - [ ] CI/CD for infra (Cloud Build / GitHub Actions)
