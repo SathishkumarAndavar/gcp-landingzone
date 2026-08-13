@@ -16,7 +16,7 @@ A GCP landing zone is a prescriptive environment that provides an initial, secur
 - Organization structure and folders
 - Projects pattern (infra, shared services, workloads, security)
 - Identity and Access Management (IAM) and groups
-- Organization Policies and constraints
+- Organization Policies (e.g., for resource locations, disabling public IPs)
 - Billing structure and billing accounts
 - Network design: VPCs, subnets, Shared VPC, Cloud NAT
 - Security: SCC, Cloud Armor, logging, audit sinks
@@ -26,7 +26,7 @@ A GCP landing zone is a prescriptive environment that provides an initial, secur
 ## Best Practices
 
 - Use least-privilege IAM and group-based roles
-- Enforce Org Policies for constraints (e.g., allowed regions)
+- Enforce Org Policies for guardrails (e.g., using `constraints/gcp.resourceLocations` to allow only specific regions)
 - Separate projects for isolation and billing
 - Use Shared VPC for central network management
 - Automate with Terraform and use a remote state backend
